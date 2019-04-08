@@ -16,7 +16,8 @@ public class ProjectCalloutService {
         
         // Map to hold all the Callouts that will be done.
         Map<HttpRequest, Id> requests = new Map<HttpRequest, Id>();
-        // Map to hold the Callout responses
+        // Map to hold the Callout responses (This map can be used in the catch block, to store the requests that failed)
+        // And later on be saved in a error log object.
         Map<Id, HTTPResponse> responses = new Map<Id, HTTPResponse>();
         HttpRequest request;
         HTTPResponse response;
